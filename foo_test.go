@@ -11,4 +11,11 @@ func TestFoo(t *testing.T) {
 	if result != expect {
 		t.Errorf("Foo(%q) result is not %q: %q", s, expect, result)
 	}
+
+	s = "bar2"
+	result = Foo(s)
+	expect = s + " : foo"
+	if result != expect {
+		t.Errorf("Foo(%q) result is not %q: %q", s, expect, result)
+	}
 }
